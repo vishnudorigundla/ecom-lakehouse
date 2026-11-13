@@ -189,9 +189,9 @@ def run_gold(spark, catalog: str, run_id: str, audit) -> None:
     print(f"orders to reload: {n_changed} (window {lo} -> {hi})")
 
     if n_changed:
-        ok = all([step(name, lambda sql=sql: _merge(spark, sql), n_changed)
-                  for name, sql in fact_sql(catalog).items()])
-        if ok:
+        results = [step(name, lambda sql=sql: _merge(spark, sql), n_changed)
+                   for name, sql in fact_sql(catalog).items()]
+        if all(results):
             set_watermark(spark, catalog, ORDERS_GROUP, hi, run_id)
 
     # 3. Reviews: own watermark.

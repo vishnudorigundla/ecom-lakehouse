@@ -80,6 +80,6 @@ def run_forecast_scoring(spark, catalog: str, run_id: str, audit) -> None:
         version = int(spark.sql(f"DESCRIBE HISTORY {catalog}.{TARGET} LIMIT 1").first()["version"])
         audit.finish("ml", TARGET, "SUCCESS", read, written, 0, version)
         print(f"[{TARGET}] days forecast={read} rows written={written}")
-    except Exception as exc:  # noqa: BLE001 - record the failure, then fail the job
+    except Exception as exc:  # record the failure, then fail the job
         audit.finish("ml", TARGET, "FAILED", error=f"{type(exc).__name__}: {exc}")
         raise
