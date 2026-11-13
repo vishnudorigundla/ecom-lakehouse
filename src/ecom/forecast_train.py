@@ -81,6 +81,6 @@ def run_forecast_training(spark, catalog: str, run_id: str, audit, promote: bool
         audit.finish("ml", MODEL_TABLE, "SUCCESS", rows, 0, 0, version)
         print(f"[{name}] trained on {rows} days -> version {version}"
               f" ({'promoted to champion' if promote else 'NOT promoted'})")
-    except Exception as exc:  # noqa: BLE001 - record the failure, then fail the job
+    except Exception as exc:  # record the failure, then fail the job
         audit.finish("ml", MODEL_TABLE, "FAILED", error=f"{type(exc).__name__}: {exc}")
         raise
