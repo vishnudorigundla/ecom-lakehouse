@@ -1,0 +1,46 @@
+resources:
+  jobs:
+    daily_pipeline:
+      name: "ecom - daily pipeline"
+      max_concurrent_runs: 1
+      email_notifications:
+        on_failure:
+          - ${workspace.current_user.userName}
+      tasks:
+        - task_key: bronze_ingest
+          notebook_task:
+            notebook_path: ../../src/notebooks/10_bronze_ingest.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              bundle_target: ${bundle.target}
+              run_id: "{{job.run_id}}"
+
+        - task_key: silver_transform
+          depends_on:
+            - task_key: bronze_ingest
+          notebook_task:
+            notebook_path: ../../src/notebooks/20_silver_transform.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              bundle_target: ${bundle.target}
+              run_id: "{{job.run_id}}"
+
+        - task_key: gold_transform
+          depends_on:
+            - task_key: silver_transform
+          notebook_task:
+            notebook_path: ../../src/notebooks/30_gold_transform.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              bundle_target: ${bundle.target}
+              run_id: "{{job.run_id}}"
+
+        - task_key: forecast_score
+          depends_on:
+            - task_key: gold_transform
+          notebook_task:
+            notebook_path: ../../src/notebooks/50_forecast_score.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              bundle_target: ${bundle.target}
+              run_id: "{{job.run_id}}"

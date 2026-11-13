@@ -1,0 +1,39 @@
+# Declarative Automation Bundle configuration
+bundle:
+  name: "ecom-pipeline"
+
+variables:
+  catalog:
+    description: Unity Catalog catalog for this environment
+    default: ecom_dev
+
+include:
+  - resources/*.yml
+  - resources/*/*.yml
+
+# Notebooks live outside the bundle root (../src), so add them to the sync paths
+sync:
+  paths:
+    - .
+    - ../src
+
+targets:
+  # Development: the default target. Resources get a [dev <your name>] prefix and schedules stay paused.
+  dev:
+    mode: development
+    default: true
+    variables:
+      catalog: ecom_dev
+    workspace:
+      host: https://adb-7405606400360965.5.azuredatabricks.net
+
+  # Production: not deployed yet (the ecom_prod catalog doesn't exist yet).
+  prod:
+    mode: production
+    variables:
+      catalog: ecom_prod
+    workspace:
+      host: https://adb-7405606400360965.5.azuredatabricks.net
+      root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    run_as:
+      user_name: ${workspace.current_user.userName}
