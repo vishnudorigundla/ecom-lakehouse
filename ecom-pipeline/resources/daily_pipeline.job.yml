@@ -5,7 +5,7 @@ resources:
       max_concurrent_runs: 1
       email_notifications:
         on_failure:
-          - ${workspace.current_user.userName}
+          - ${var.alert_email}
       tasks:
         - task_key: bronze_ingest
           notebook_task:

@@ -6,6 +6,9 @@ variables:
   catalog:
     description: Unity Catalog catalog for this environment
     default: ecom_dev
+  alert_email:
+    description: Who gets an email when the pipeline fails
+    default: vishnudorigundla453@gmail.com
 
 include:
   - resources/*.yml
