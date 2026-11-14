@@ -1,0 +1,59 @@
+{
+	"name": "tr_daily_ingest",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "pl_ingest_daily",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"p_run_date": "@formatDateTime(trigger().outputs.windowStartTime, 'yyyy-MM-dd')",
+				"p_tables": [
+					{
+						"table": "orders",
+						"key": "ingest_date"
+					},
+					{
+						"table": "order_items",
+						"key": "ingest_date"
+					},
+					{
+						"table": "payments",
+						"key": "ingest_date"
+					},
+					{
+						"table": "reviews",
+						"key": "ingest_date"
+					},
+					{
+						"table": "customers",
+						"key": "snapshot_date"
+					},
+					{
+						"table": "products",
+						"key": "snapshot_date"
+					},
+					{
+						"table": "sellers",
+						"key": "snapshot_date"
+					}
+				]
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Hour",
+			"interval": 1,
+			"startTime": "2026-11-01T00:00:00Z",
+			"endTime": "2026-11-05T14:40:26Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

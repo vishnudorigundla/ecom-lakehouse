@@ -1,0 +1,15 @@
+{
+	"name": "adf-ecom-dev-321",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4513e7e5-4099-4692-b163-f411f15c8c7b",
+		"tenantId": "2a2684d9-fb17-420f-b37e-7bd431c4485c"
+	}
+}

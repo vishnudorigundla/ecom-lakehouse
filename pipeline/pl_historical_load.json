@@ -1,0 +1,200 @@
+{
+	"name": "pl_historical_load",
+	"properties": {
+		"activities": [
+			{
+				"name": "fe_hist",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.p_items",
+						"type": "Expression"
+					},
+					"batchCount": 4,
+					"activities": [
+						{
+							"name": "copy_hist_files",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "BinarySource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"wildcardFolderPath": {
+											"value": "@concat('ecommerce_landing_data/landing/ecommerce/', item().table, '/', item().key, '=', item().pattern)",
+											"type": "Expression"
+										},
+										"wildcardFileName": "*",
+										"deleteFilesAfterCompletion": false
+									},
+									"formatSettings": {
+										"type": "BinaryReadSettings"
+									}
+								},
+								"sink": {
+									"type": "BinarySink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings",
+										"copyBehavior": "PreserveHierarchy"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_source_binary",
+									"type": "DatasetReference",
+									"parameters": {
+										"p_folder": {
+											"value": "ecommerce_landing_data/landing/ecommerce",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_landing_binary",
+									"type": "DatasetReference",
+									"parameters": {
+										"p_folder": {
+											"value": "@concat('ecommerce/', item().table)",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"p_items": {
+				"type": "array",
+				"defaultValue": [
+					{
+						"table": "orders",
+						"key": "ingest_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "orders",
+						"key": "ingest_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "orders",
+						"key": "ingest_date",
+						"pattern": "2026-*"
+					},
+					{
+						"table": "order_items",
+						"key": "ingest_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "order_items",
+						"key": "ingest_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "order_items",
+						"key": "ingest_date",
+						"pattern": "2026-*"
+					},
+					{
+						"table": "payments",
+						"key": "ingest_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "payments",
+						"key": "ingest_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "payments",
+						"key": "ingest_date",
+						"pattern": "2026-*"
+					},
+					{
+						"table": "reviews",
+						"key": "ingest_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "reviews",
+						"key": "ingest_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "reviews",
+						"key": "ingest_date",
+						"pattern": "2026-*"
+					},
+					{
+						"table": "customers",
+						"key": "snapshot_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "customers",
+						"key": "snapshot_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "customers",
+						"key": "snapshot_date",
+						"pattern": "2026-*"
+					},
+					{
+						"table": "products",
+						"key": "snapshot_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "products",
+						"key": "snapshot_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "products",
+						"key": "snapshot_date",
+						"pattern": "2026-*"
+					},
+					{
+						"table": "sellers",
+						"key": "snapshot_date",
+						"pattern": "2024-*"
+					},
+					{
+						"table": "sellers",
+						"key": "snapshot_date",
+						"pattern": "2025-*"
+					},
+					{
+						"table": "sellers",
+						"key": "snapshot_date",
+						"pattern": "2026-*"
+					}
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-11-05T14:15:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

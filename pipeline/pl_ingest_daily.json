@@ -1,0 +1,95 @@
+{
+	"name": "pl_ingest_daily",
+	"properties": {
+		"activities": [
+			{
+				"name": "fe_tables",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.p_tables",
+						"type": "Expression"
+					},
+					"isSequential": false,
+					"batchCount": 4,
+					"activities": [
+						{
+							"name": "ep_copy_table",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "pl_copy_table_date",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"p_table": {
+										"value": "@item().table",
+										"type": "Expression"
+									},
+									"p_partition_key": {
+										"value": "@item().key",
+										"type": "Expression"
+									},
+									"p_date": {
+										"value": "@pipeline().parameters.p_run_date",
+										"type": "Expression"
+									}
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"p_run_date": {
+				"type": "string",
+				"defaultValue": "   @formatDateTime(trigger().outputs.windowStartTime, 'yyyy-MM-dd')"
+			},
+			"p_tables": {
+				"type": "array",
+				"defaultValue": [
+					{
+						"table": "orders",
+						"key": "ingest_date"
+					},
+					{
+						"table": "order_items",
+						"key": "ingest_date"
+					},
+					{
+						"table": "payments",
+						"key": "ingest_date"
+					},
+					{
+						"table": "reviews",
+						"key": "ingest_date"
+					},
+					{
+						"table": "customers",
+						"key": "snapshot_date"
+					},
+					{
+						"table": "products",
+						"key": "snapshot_date"
+					},
+					{
+						"table": "sellers",
+						"key": "snapshot_date"
+					}
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-11-05T14:31:02Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

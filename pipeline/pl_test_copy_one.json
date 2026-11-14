@@ -1,0 +1,60 @@
+{
+	"name": "pl_test_copy_one",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BinarySource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "BinaryReadSettings"
+						}
+					},
+					"sink": {
+						"type": "BinarySink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_source_binary",
+						"type": "DatasetReference",
+						"parameters": {
+							"p_folder": "ecommerce_landing_data/landing/ecommerce/orders/ingest_date=2024-11-01"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_landing_binary",
+						"type": "DatasetReference",
+						"parameters": {
+							"p_folder": "ecommerce/orders/ingest_date=2024-11-01"
+						}
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-03T15:09:03Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
