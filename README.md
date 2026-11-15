@@ -8,7 +8,7 @@
 ![Azure Data Factory](https://img.shields.io/badge/Azure%20Data%20Factory-0078D4?logo=microsoftazure&logoColor=white)
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)
 ![Prophet](https://img.shields.io/badge/Prophet-1877F2)
-![CI](https://github.com/vishnudorigundla/ecom-lakehouse/actions/workflows/ci.yml/badge.svg)
+![CD](https://github.com/vishnudorigundla/ecom-lakehouse/actions/workflows/cd.yml/badge.svg)
 
 > The data is synthetic, produced by a generator script, so results show how the platform behaves, not real business performance.
 
