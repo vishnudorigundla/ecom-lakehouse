@@ -266,8 +266,31 @@ tests/                unit tests
 <img width="1919" height="832" alt="image" src="https://github.com/user-attachments/assets/5d98ff56-f229-475e-8b75-46d98228cb57" />
 
 ### databricks
+<img width="1919" height="840" alt="image" src="https://github.com/user-attachments/assets/a2e57d5b-44e1-46eb-bfa1-0f78d355adb2" />
+<img width="1919" height="885" alt="image" src="https://github.com/user-attachments/assets/36accc98-d35e-4272-8060-04be4236d6da" />
+<img width="1912" height="849" alt="image" src="https://github.com/user-attachments/assets/bd06f88e-5dcd-4f8e-8802-1bbce6a6f7e9" />
+<img width="1885" height="842" alt="image" src="https://github.com/user-attachments/assets/c573b320-6a30-4b2f-b444-d1524e8725e2" />
+<img width="1914" height="919" alt="image" src="https://github.com/user-attachments/assets/ff4cf6ef-1d4d-4abb-9025-db11662c6c26" />
+<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/8f691693-79ef-448f-af47-22496ff7fadf" />
+<img width="1918" height="856" alt="image" src="https://github.com/user-attachments/assets/f6c5ba3c-b237-47b2-8600-0852a161548c" />
+<img width="1906" height="878" alt="image" src="https://github.com/user-attachments/assets/7d3f7a64-c8b0-4d59-8145-bcfdedb21d3f" />
+<img width="1908" height="626" alt="image" src="https://github.com/user-attachments/assets/11b41ae0-e1d1-4b11-82ab-bf69cfbc6a8d" />
+<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/620a5b99-cefe-472b-80e4-7fc82184fe4a" />
+<img width="1919" height="846" alt="image" src="https://github.com/user-attachments/assets/5b96f407-7bcd-47b8-b89e-daab2a4de91d" />
+<img width="1918" height="828" alt="image" src="https://github.com/user-attachments/assets/bd0a31e7-dbea-439f-a60e-b8d5715769eb" />
+<img width="1912" height="856" alt="image" src="https://github.com/user-attachments/assets/8b171613-0ee5-4377-82ef-a65fa5f1b455" />
 
+<img width="1914" height="614" alt="image" src="https://github.com/user-attachments/assets/4245ddb9-6c41-4d75-85c2-9f11a4688d79" />
 
+<img width="1916" height="863" alt="image" src="https://github.com/user-attachments/assets/21c0c1da-3017-4322-b805-ee56c2c278dc" />
+<img width="1917" height="811" alt="image" src="https://github.com/user-attachments/assets/42b77889-018b-49ab-a33b-7084866e4aa8" />
+<img width="1918" height="849" alt="image" src="https://github.com/user-attachments/assets/efefbc2f-f121-4ea3-84d7-0d631811ed89" />
+<img width="1915" height="839" alt="image" src="https://github.com/user-attachments/assets/033b9878-fb35-4c53-b67b-89bee9d0d621" />
 
+### jobs
 
+<img width="1919" height="831" alt="image" src="https://github.com/user-attachments/assets/3ef8061b-fccc-4bee-bfe9-ff0d1a98cab0" />
+
+<img width="1912" height="813" alt="image" src="https://github.com/user-attachments/assets/4ab8b36c-4a91-49b9-b9f1-b7037a1b9094" />
+<img width="1919" height="830" alt="image" src="https://github.com/user-attachments/assets/455eaf54-6dec-4514-9c10-a9aebbe4be0b" />
 
