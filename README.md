@@ -290,6 +290,7 @@ tests/                unit tests
 ### jobs
 
 <img width="1919" height="831" alt="image" src="https://github.com/user-attachments/assets/3ef8061b-fccc-4bee-bfe9-ff0d1a98cab0" />
+<img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/1b1376ba-9007-4a87-aa32-b8ad18d70a98" />
 
 <img width="1912" height="813" alt="image" src="https://github.com/user-attachments/assets/4ab8b36c-4a91-49b9-b9f1-b7037a1b9094" />
 <img width="1919" height="830" alt="image" src="https://github.com/user-attachments/assets/455eaf54-6dec-4514-9c10-a9aebbe4be0b" />
