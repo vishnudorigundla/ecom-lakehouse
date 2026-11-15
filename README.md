@@ -241,3 +241,33 @@ tests/                unit tests
 ## Author
 
 **Dorigundla vishnuvardhan reddy** · <[LinkedIn or portfolio link](https://www.linkedin.com/in/vishnu-vardhan-reddy-dorigundla-353bb1255/)>
+
+
+## outputs:
+<img width="1919" height="828" alt="image" src="https://github.com/user-attachments/assets/3f61e975-400c-4385-9ddd-f1fbc76e1c26" />
+<img width="1905" height="838" alt="image" src="https://github.com/user-attachments/assets/4f7fa609-ea25-4c0f-9193-e1f6f3c41ce2" />
+<img width="1916" height="825" alt="image" src="https://github.com/user-attachments/assets/913cae03-b466-4866-97a8-8f5ed5ed4521" />
+<img width="1916" height="841" alt="image" src="https://github.com/user-attachments/assets/ab93ef24-526b-41fb-b4bf-ddcb2592cfce" />
+<img width="1893" height="799" alt="image" src="https://github.com/user-attachments/assets/a3bf9fd7-5e2b-4a9b-9159-78b6293ee5b9" />
+<img width="1918" height="866" alt="image" src="https://github.com/user-attachments/assets/8cc1e9f4-6cca-4d94-9217-79755bf5e353" />
+
+<img width="1904" height="853" alt="image" src="https://github.com/user-attachments/assets/1f19f582-5841-4e38-87ae-d4508ef89736" />
+<img width="1915" height="845" alt="image" src="https://github.com/user-attachments/assets/092c8484-896a-4be8-898a-a87010d8025c" />
+
+#### adf
+<img width="1901" height="833" alt="image" src="https://github.com/user-attachments/assets/7fafba67-0bea-4f66-be63-9b1354a2a2b9" />
+<img width="1904" height="837" alt="image" src="https://github.com/user-attachments/assets/84d2f949-76ea-4222-8da8-da411bac0bf8" />
+<img width="1916" height="844" alt="image" src="https://github.com/user-attachments/assets/25fccc05-0ffd-437f-99ae-3b97513d829d" />
+<img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/8e309591-446b-4873-aed6-7dfadf6eb17b" />
+
+### acess connector
+<img width="1919" height="831" alt="image" src="https://github.com/user-attachments/assets/559a7178-6bac-455d-870c-a77c8ed80499" />
+
+<img width="1919" height="832" alt="image" src="https://github.com/user-attachments/assets/5d98ff56-f229-475e-8b75-46d98228cb57" />
+
+### databricks
+
+
+
+
+
